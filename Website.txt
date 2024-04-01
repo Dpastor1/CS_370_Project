@@ -3,11 +3,13 @@ What needs to be implemented:
     while javascript is responsible for interacting with the website. Can’t use markdown as it can’t send a request to the 
     pi’s server
     - Website will send a url to the pi to process a request using html, should update the data in real-time
-    - FIRST IMPLEMENT HTML SIDE OF WEBSITE
+    - FIRST IMPLEMENT HTML SIDE OF WEBSITE\
+        * How to tie javascript to html buttons
+        * How to implement a textbox and button UI to update values
     - after html is desired layout, create js side of interaction with the user
         * Modify cutoff value(s)
         * User Login??
     - Next, implement server connection to ensure pi will send values
     -Once pi is confirmed to be sending correct values to website, website is finished, only thing left to be worked on would be
     design choices like adding CSS and better website design. 
-    
+
