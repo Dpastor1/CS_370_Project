@@ -1,5 +1,20 @@
-<h1 style="text-align: center;"> This is the start of our plant website!</h1>
-<p style="color: blue;">here is where we may put a user login, or the website simply connects to the one raspberry pi.<br>
-If there is a user login, the user has to connect to the specific raspberry pi's ID, which can be a mess. Definitely better for a 
-<br> scenario where many users by this product to let them know when the plant needs to be watered, so user data is kept private and
-<br> the website is catered to their specific product.</p>
+<!-- Button with text entry, could implement output in screen to show past cutoff values-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="text-align: center;"> Plant Moisture Sensor</h1>
+    <lable style="text-align: end;">Current Cutoff:</lable>
+    <p class="output1" id="output"></p>
+    <label for="tbuser">Modify Moisture cutoff: </label>
+    <input type="text" id="tbuser" placeholder="Enter Value" maxlength="14">
+    <input id="moistureUpdate" type="button" value="Update">
+    <script src="script/index.js" charset="UTF-8"></script>
+</body>
+</html>
