@@ -1,5 +1,4 @@
-const buttonLower=document.querySelector("#buttonLower");
-const buttonUpper=document.querySelector("#buttonUpper");
+const buttonUpper=document.querySelector("#buttonUpdate");
 const textentryLower=document.querySelector("#tbuser");
 const textentryUpper=document.querySelector("#upper")
 const output=document.querySelector("#output");
@@ -24,20 +23,27 @@ const checkCutoff=()=>{
     }
 }
 const updateLowerBound = ()=>{
-    moistureLower=textentryLower.value;
+    if(textentryLower.value!=""){
+        moistureLower=textentryLower.value;
+    }
     textentryLower.value="";
     output.innerHTML = " " + moistureLower +" to "+moistureUpper;
     checkCutoff();
     //Send value to Pi
 }
 const updateUpperBound = ()=>{
-    moistureUpper=textentryUpper.value;
+    if(textentryUpper.value!=""){
+        moistureUpper=textentryUpper.value;
+    }
     textentryUpper.value="";
     output.innerHTML = " " + moistureLower +" to "+moistureUpper;
     checkCutoff();
     //Send value to Pi
 }
-
-buttonLower.addEventListener('click',updateLowerBound);
-buttonUpper.addEventListener('click',updateUpperBound);
-//Once Server is set up, send values to user side, page will load with values given, and display appropriate information
+const updateBounds = ()=>{
+    updateLowerBound();
+    updateUpperBound();
+}
+buttonUpper.addEventListener('click',updateBounds);
+//Python will constantly run to measure sensor data every time increment. Once a user requests to access the website, JavaScript will
+//access the file upon access, can either ONLY give the average, or store all of the data. (probably best if all).
