@@ -1,4 +1,3 @@
-<!-- Button with text entry, could implement output in screen to show past cutoff values-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +9,21 @@
 </head>
 <body>
     <h1 style="text-align: center;"> Plant Moisture Sensor</h1>
-    <lable style="text-align: end;">Current Cutoff:</lable>
-    <p class="output1" id="output"></p>
-    <label for="tbuser">Modify Moisture cutoff: </label>
-    <input type="text" id="tbuser" placeholder="Enter Value" maxlength="14">
-    <input id="moistureUpdate" type="button" value="Update">
-    <script src="script/index.js" charset="UTF-8"></script>
+    <h2 id="shouldWater" style="text-align: center;"></h2>
+    <div style="text-align: center;">
+        <lable style="text-align: end;">Current Cutoff bounds:</lable>
+        <p class="output1" id="output"></p>
+    </div>
+    <div style="text-align: center;"> <!--div is used for css formatting, I broke the lower and upper bound text box fields with 
+        everything associated with them into one field for css-->
+        <label style="text-align: center;" for="tbuser">Modify Moisture Cutoff Lower Bound: </label>
+        <input type="text" id="tbuser" placeholder="Enter Value" maxlength="14">
+        <input id="buttonLower" type="button" value="Update">
+        <br>
+        <label style="text-align: center;" for="upper">Modify Moisture Cutoff Upper Bound: </label>
+        <input type="text" id="upper" placeholder="Enter Value" maxlength="14">
+        <input id="buttonUpper" type="button" value="Update">
+        <script src="script/index.js" charset="UTF-8"></script> 
+    </div>
 </body>
 </html>
