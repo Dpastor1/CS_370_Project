@@ -1,0 +1,71 @@
+body{
+    /*CSS NOTES:
+    periods symbolize classes
+    hashtag symbolizes id
+    nothing is a tag
+    */
+    background-color: #f5f5f5;
+    h1{
+        font-size: 60px;
+        text-align: center;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    }
+    #buttonUpdate{
+        color: #000000;
+        background-color: #29a8cb;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 10px;
+        margin-left: 31%;
+        margin-top: 3%;
+        padding: 1%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    #checkData{
+        margin-left: 2%;
+    }
+    #shouldWater{
+        text-align: left;
+    }
+    #output{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight:bold;
+        font-size: 40px;
+    }
+    .container{
+        float:left;
+        margin-left: 10%;
+        width: 35%;
+        height: 175px;
+        border:3px #eac10a solid;
+        border-radius: 15px;
+        background-color: #b3ffb3;
+    }
+    .modifyBounds{
+        margin-top: 3%;
+        margin-left: 2%;
+    }
+    .bounds{
+        float: right;
+        margin-right: 10%;
+        width: 35%;
+        border:3px #eac10a solid;
+        border-radius: 15px;
+        text-align: center;
+        background-color: #b3ffb3;
+        color:#000000;
+    }
+    .boundTitle{
+        font-size: 40px;
+    }
+    table, td, tr{
+        border:2px black solid
+    }
+    .table{
+        margin-top:10%;
+        float:right;
+    }
+}

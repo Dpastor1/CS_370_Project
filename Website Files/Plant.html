@@ -9,19 +9,140 @@
 </head>
 <body>
     <h1> Plant Moisture Sensor</h1>
-    <h2 id="shouldWater"></h2>
-    <div>
-        <lable>Current Cutoff bounds:</lable>
-        <p class="output1" id="output"></p>
-    </div>
-    <div> <!--div is used for css formatting, I broke the lower and upper bound text box fields with 
+    <div class="container"> <!--div is used for css formatting, I broke the lower and upper bound text box fields with 
         everything associated with them into one field for css-->
-        <label for="tbuser">Modify Moisture Cutoff Lower Bound: </label>
-        <input type="text" id="tbuser" placeholder="Enter Value" maxlength="14">
-        <br>
-        <label for="upper">Modify Moisture Cutoff Upper Bound: </label>
-        <input type="text" id="upper" placeholder="Enter Value" maxlength="14">
+        <div class="modifyBounds" id="Lower">
+            <label for="tbuser">Modify Moisture Cutoff Lower Bound: </label>
+            <input type="text" id="tbuser" placeholder="Enter Value" maxlength="14">
+        </div>
+        <div class="modifyBounds" id="Upper">
+            <label for="upper">Modify Moisture Cutoff Upper Bound: </label>
+            <input type="text" id="upper" placeholder="Enter Value" maxlength="14">
+        </div>
+        <input id="checkData" type="checkbox" name="data">
+        <label for="data">Show Data</label>
         <input id="buttonUpdate" type="button" value="Update"> 
+        <h2 id="shouldWater"></h2>
+    </div>
+    <div class="bounds">
+        <lable class="boundTitle">Current Cutoff bounds:</lable>
+        <p id="output">&nbsp</p>
+    </div>
+    <div class="tables">
+        <table id="values1" style="display: none">
+            <tr>
+                <th>Hour</th>
+                <th>Moisture</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>17</td>
+            </tr>
+        </table>
+        <table id="values2">
+            <tr>
+                <th>Hour</th>
+                <th>Moisture</th>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>17</td>
+            </tr>
+        </table>
+        <table id="values3">
+            <tr>
+                <th>Hour</th>
+                <th>Moisture</th>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>17</td>
+            </tr>
+        </table>
     </div>
     <script src="script/index.js" charset="UTF-8"></script>
 </body>

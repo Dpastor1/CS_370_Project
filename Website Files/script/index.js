@@ -3,12 +3,16 @@ const textentryLower=document.querySelector("#tbuser");
 const textentryUpper=document.querySelector("#upper")
 const output=document.querySelector("#output");
 const conditionaltext=document.querySelector("#shouldWater");
+const checkBox=document.getElementById("checkData");
+const cells=document.getElementById('values1').getElementsByTagName('td');
+var table=document.getElementById('values1');
 let moistureAverage=0;
 let moistureLower;
 let moistureUpper;
+//TODO: add data structure to hold hourly values, on website startup, calculate the average. On checkbox, fill data table with values.
 //Logic for telling the user if they need to water their plant based on the moisture average over time
 const checkCutoff=()=>{
-    if(moistureLower>moistureUpper){
+    if(moistureLower>moistureUpper || (moistureLower == undefined || moistureUpper == undefined)){
         conditionaltext.innerHTML="Invalid Bounds, please make lower is less than or equal to the upper bounds";
         return; 
     }
@@ -40,9 +44,20 @@ const updateUpperBound = ()=>{
     checkCutoff();
     //Send value to Pi
 }
+const changeDataBox = ()=>{
+    if(checkBox.checked){
+        //code to show average and/or hourly data
+        console.log("changing data");
+        table.style.display='block';
+    }else{
+        // code to remove it
+        table.style.display='none';
+    }
+}
 const updateBounds = ()=>{
     updateLowerBound();
     updateUpperBound();
+    changeDataBox();
 }
 buttonUpper.addEventListener('click',updateBounds);
 //Python will constantly run to measure sensor data every time increment. Once a user requests to access the website, JavaScript will
