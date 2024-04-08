@@ -8,7 +8,7 @@ let moistureLower;
 let moistureUpper;
 //Logic for telling the user if they need to water their plant based on the moisture average over time
 const checkCutoff=()=>{
-    if(moistureLower>moistureUpper){
+    if(moistureLower>moistureUpper || (moistureLower == undefined || moistureUpper == undefined)){
         conditionaltext.innerHTML="Invalid Bounds, please make lower is less than or equal to the upper bounds";
         return; 
     }
@@ -44,6 +44,9 @@ const updateBounds = ()=>{
     updateLowerBound();
     updateUpperBound();
 }
-buttonUpper.addEventListener('click',updateBounds);
 //Python will constantly run to measure sensor data every time increment. Once a user requests to access the website, JavaScript will
 //access the file upon access, can either ONLY give the average, or store all of the data. (probably best if all).
+//--------------------------------------------------------------------------------------------------------
+//Code to access data file should go HERE (functions can go above, just call everything before eventlistener)
+//vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+buttonUpper.addEventListener('click',updateBounds);

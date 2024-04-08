@@ -9,19 +9,22 @@
 </head>
 <body>
     <h1> Plant Moisture Sensor</h1>
-    <h2 id="shouldWater"></h2>
-    <div>
-        <lable>Current Cutoff bounds:</lable>
-        <p class="output1" id="output"></p>
-    </div>
-    <div> <!--div is used for css formatting, I broke the lower and upper bound text box fields with 
+    <div class="container"> <!--div is used for css formatting, I broke the lower and upper bound text box fields with 
         everything associated with them into one field for css-->
-        <label for="tbuser">Modify Moisture Cutoff Lower Bound: </label>
-        <input type="text" id="tbuser" placeholder="Enter Value" maxlength="14">
-        <br>
-        <label for="upper">Modify Moisture Cutoff Upper Bound: </label>
-        <input type="text" id="upper" placeholder="Enter Value" maxlength="14">
+        <div class="modifyBounds" id="Lower">
+            <label for="tbuser">Modify Moisture Cutoff Lower Bound: </label>
+            <input type="text" id="tbuser" placeholder="Enter Value" maxlength="14">
+        </div>
+        <div class="modifyBounds" id="Upper">
+            <label for="upper">Modify Moisture Cutoff Upper Bound: </label>
+            <input type="text" id="upper" placeholder="Enter Value" maxlength="14">
+        </div>
         <input id="buttonUpdate" type="button" value="Update"> 
+        <h2 id="shouldWater"></h2>
+    </div>
+    <div class="bounds">
+        <lable class="boundTitle">Current Cutoff bounds:</lable>
+        <p id="output">&nbsp</p>
     </div>
     <script src="script/index.js" charset="UTF-8"></script>
 </body>
