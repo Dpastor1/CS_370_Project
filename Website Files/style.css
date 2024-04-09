@@ -11,6 +11,9 @@ body{
         text-align: center;
 
     }
+    .average{
+        text-align: center;
+    }
     #buttonUpdate{
         color: #000000;
         background-color: #29a8cb;
@@ -35,9 +38,10 @@ body{
     }
     .container{
         float:left;
+        word-break: break-all;
         margin-left: 10%;
+        box-sizing:content-box;
         width: 35%;
-        height: 175px;
         border:3px #eac10a solid;
         border-radius: 15px;
         background-color: #b3ffb3;

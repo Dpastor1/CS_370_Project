@@ -3,6 +3,9 @@ const textentryLower=document.querySelector("#tbuser");
 const textentryUpper=document.querySelector("#upper")
 const output=document.querySelector("#output");
 const conditionaltext=document.querySelector("#shouldWater");
+const averageText=document.getElementById("average");
+let file=new FileReader();
+let array;
 let moistureAverage=0;
 let moistureLower;
 let moistureUpper;
@@ -47,6 +50,21 @@ const updateBounds = ()=>{
 //Python will constantly run to measure sensor data every time increment. Once a user requests to access the website, JavaScript will
 //access the file upon access, can either ONLY give the average, or store all of the data. (probably best if all).
 //--------------------------------------------------------------------------------------------------------
-//Code to access data file should go HERE (functions can go above, just call everything before eventlistener)
+//Code to access data file should go HERE (call everything before eventlistener)
 //vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+const getAverage = ()=>{
+    /*The following may work, nginx has to manage file access requests, that is the only way
+    we can access it. the string in the fetch() parenthesis can be changed based on directory
+    fetch('data.txt')
+  .then(response => response.text())
+  .then(data => {
+    var numbers = data.trim().split('\n').map(Number).filter(Boolean);
+
+    var sum = numbers.reduce((acc, curr) => acc + curr, 0);
+    var average = sum / numbers.length; 
+    */
+}
+
+getAverage();
+averageText.innerHTML+= moistureAverage;
 buttonUpper.addEventListener('click',updateBounds);
