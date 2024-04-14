@@ -6,7 +6,7 @@ const conditionaltext=document.querySelector("#shouldWater");
 const averageText=document.getElementById("average");
 let file=new FileReader();
 let array;
-let moistureAverage=0;
+let moistureAverage=15.7776908; // test value
 let moistureLower;
 let moistureUpper;
 //Logic for telling the user if they need to water their plant based on the moisture average over time
@@ -61,10 +61,10 @@ const getAverage = ()=>{
     var numbers = data.trim().split('\n').map(Number).filter(Boolean);
 
     var sum = numbers.reduce((acc, curr) => acc + curr, 0);
-    var average = sum / numbers.length; 
+    moistureAverage = sum / numbers.length; 
     */
 }
 
 getAverage();
-averageText.innerHTML+= moistureAverage;
+averageText.innerHTML+= moistureAverage.toFixed(4);
 buttonUpper.addEventListener('click',updateBounds);
