@@ -1,0 +1,73 @@
+body{
+    /*CSS NOTES:
+    periods symbolize classes
+    hashtag symbolizes id
+    nothing is a tag
+    */
+    background-color: #f5f5f5;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    h1{
+        font-size: 60px;
+        text-align: center;
+
+    }
+    .average{
+        text-align: center;
+    }
+    #buttonUpdate{
+        color: #000000;
+        background-color: #29a8cb;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 7px;
+        margin-left: 54%;
+        margin-top: 3%;
+        padding: 1%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    #checkData{
+        margin-left: 2%;
+    }
+    #shouldWater{
+        text-align: left;
+    }
+    #output{
+        font-weight:bold;
+        font-size: 40px;
+    }
+    .container{
+        float:left;
+        word-break: break-all;
+        margin-left: 10%;
+        box-sizing:content-box;
+        width: 35%;
+        border:3px #eac10a solid;
+        border-radius: 15px;
+        background-color: #b3ffb3;
+    }
+    .modifyBounds{
+        margin-top: 3%;
+        margin-left: 2%;
+    }
+    .bounds{
+        float: right;
+        margin-right: 10%;
+        width: 35%;
+        border:3px #eac10a solid;
+        border-radius: 15px;
+        text-align: center;
+        background-color: #b3ffb3;
+        color:#000000;
+    }
+    .boundTitle{
+        font-size: 40px;
+    }
+    table, td, tr{
+        border:2px black solid
+    }
+    .table{
+        margin-top:10%;
+        float:right;
+    }
+}
