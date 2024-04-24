@@ -12,7 +12,7 @@ let moistureUpper;
 //Logic for telling the user if they need to water their plant based on the moisture average over time
 const checkCutoff=()=>{
     if(moistureLower>moistureUpper || (moistureLower == undefined || moistureUpper == undefined)){
-        conditionaltext.innerHTML="Invalid Bounds, please make lower is less than or equal to the upper bounds";
+        conditionaltext.innerHTML="Enter a desired range to start.";
         return; 
     }
     if (moistureAverage > moistureUpper){
@@ -52,18 +52,19 @@ const updateBounds = ()=>{
 //--------------------------------------------------------------------------------------------------------
 //Code to access data file should go HERE (call everything before eventlistener)
 //vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-const getAverage = ()=>{
-    /*The following may work, nginx has to manage file access requests, that is the only way
-    we can access it. the string in the fetch() parenthesis can be changed based on directory
-    fetch('data.txt')
-  .then(response => response.text())
-  .then(data => {
-    var numbers = data.trim().split('\n').map(Number).filter(Boolean);
+const getAverage = () => {
+    fetch('http://10.253.140.191:5000/moisture')  // Update with your Raspberry Pi's IP address and port
+        .then(response => response.json())
+        .then(data => {
+            let moistureAverage = data.moisture;
+            averageText.innerHTML = "Running Average: " + moistureAverage.toFixed(4);
 
-    var sum = numbers.reduce((acc, curr) => acc + curr, 0);
-    moistureAverage = sum / numbers.length; 
-    */
-}
+            checkCutoff();  // Re-check the cutoff with the new average
+        })
+        .catch(error => {
+            console.error('Error fetching moisture data:', error);
+        });
+};
 
 getAverage();
 averageText.innerHTML+= moistureAverage.toFixed(4);
